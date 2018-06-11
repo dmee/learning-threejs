@@ -1,14 +1,24 @@
 {
-  "name": "learning-threejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "three": "^0.93.0"
-  }
+    "name": "learning-threejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "server": "http-server ./dist -s -p 3003",
+        "build": "node ./bin/build.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "three": "^0.93.0"
+    },
+    "devDependencies": {
+        "babel-loader": "^7.1.4",
+        "chalk": "^2.4.1",
+        "commander": "^2.15.1",
+        "inquirer": "^6.0.0",
+        "shelljs": "^0.8.2",
+        "webpack": "^4.12.0",
+        "webpack-merge": "^4.1.2"
+    }
 }

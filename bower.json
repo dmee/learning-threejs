@@ -14,5 +14,8 @@
     "plugins",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "three.js": "three#*"
+  }
 }

@@ -3,6 +3,9 @@ const chalk = require('chalk');
 const shell = require('shelljs');
 const Config = require('./config/index');
 
+// 设置当前根目录
+process.env.BASE_PATH = process.cwd();
+
 inquirer.prompt({
     type: 'list',
     name: 'env',
@@ -17,8 +20,9 @@ inquirer.prompt({
         value: 'production'
     }]
 }).then(answers => {
-    var env = answers.env;
-    process.env.NODE_ENV = env;
+    process.env.NODE_ENV = answers.env;
+    shell.exec(`gulp --gulpfile ./bin/gulp/gulpfile.dev.js`);
+    console.info('\r\n');
 }).catch(e => {
     console.info(e);
 });

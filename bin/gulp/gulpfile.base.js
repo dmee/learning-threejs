@@ -120,7 +120,8 @@ module.exports = () => {
     // 监听任务
     gulp.task("watch", done => {
         $.livereload.listen();
-        gulp.watch([basePath + "/src/plugins/**/*"], ["script-bundle", "less-common"]); // 插件监听
+        gulp.watch([basePath + "/src/modules/**/*"], ["script-bundle"]); // 插件模块
+        gulp.watch([basePath + "/src/plugins/**/*"], ["less-common"]); // 插件监听
         gulp.watch([basePath + "/src/styles/**/*"], ["less-dev"]); // 样式监听
         gulp.watch([basePath + "/src/scripts/**/*"], ["script-dev"]); // 样式监听
         gulp.watch([basePath + "/src/assets/**/*"], ["copy-assets"]); // 资源监听

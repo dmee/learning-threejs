@@ -16,15 +16,20 @@ module.exports = {
             use: {
                 loader: 'babel-loader'
             }
+        }, {
+            test: require.resolve('jquery'),
+            use: [{
+                loader: 'expose-loader',
+                options: 'jQuery'
+            }, {
+                loader: 'expose-loader',
+                options: '$'
+            }]
         }]
     },
     plugins: [
         new webpack.ProvidePlugin({
-            THREE: 'THREE',
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery',
+            THREE: 'THREE'
         })
     ]
 };

@@ -6,7 +6,7 @@ const Config = require('./config/index');
 // 设置当前根目录
 process.env.BASE_PATH = process.cwd();
 
-inquirer.prompt({
+/* inquirer.prompt({
     type: 'list',
     name: 'env',
     message: '请选择运行模式：',
@@ -25,4 +25,5 @@ inquirer.prompt({
     console.info('\r\n');
 }).catch(e => {
     console.info(e);
-});
+}); */
+shell.exec(`gulp --gulpfile ./bin/gulp/gulpfile.dev.js`);

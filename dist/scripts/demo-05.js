@@ -1,3 +1,5 @@
+'use strict';
+
 $(function () {
     var renderer,
         stats,
@@ -13,7 +15,6 @@ $(function () {
         renderer.setSize(frameWidth, frameHeight);
         frameDom.appendChild(renderer.domElement);
         renderer.setClearColor(0xffffff, 1);
-
 
         stats = new Stats();
         stats.domElement.style.position = 'absolute';
@@ -44,9 +45,7 @@ $(function () {
         scene = new THREE.Scene();
     }
     // 初始化灯光
-    function initLight() {
-
-    }
+    function initLight() {}
 
     // 初始化几何体
     function initGeometry() {
